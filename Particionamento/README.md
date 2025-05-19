@@ -18,7 +18,10 @@ sdd      8:48   0 892.2G  0 disk
 
 ### Agora vamos criar duas partições no disco sdb sendo a primeira de 20% do disco para container e a sunda de 80% para maquinas virtuais.
 
-sudo parted /dev/sdb
+Como o disco tem >2 TB, use uma tabela de partições GPT (o MBR não suporta esse tamanho). 
+Abra o parted no disco:
+
+''sudo parted /dev/sdb''
 
 marivaldo@ubsrv01:~$ sudo parted /dev/sdb
 GNU Parted 3.6
