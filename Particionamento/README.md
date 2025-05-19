@@ -21,7 +21,7 @@ sdd      8:48   0 892.2G  0 disk
 Como o disco tem >2 TB, use uma tabela de partições GPT (o MBR não suporta esse tamanho). 
 Abra o parted no disco:
 
-''sudo parted /dev/sdb''
+``sudo parted /dev/sdb``
 
 marivaldo@ubsrv01:~$ sudo parted /dev/sdb
 GNU Parted 3.6
