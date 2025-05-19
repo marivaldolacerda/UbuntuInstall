@@ -1,6 +1,6 @@
 # UbuntuInstall Particionamento
 
-Para Listar os HDs no servidor use o comado:
+## Listando todos HDs no servidor com o comado:
 
 sudo lsblk
 
@@ -14,3 +14,4 @@ sdc      8:32   0 446.1G  0 disk
 └─sdc2   8:34   0 445.1G  0 part /
 sdd      8:48   0 892.2G  0 disk
 
+## Agora vamos criar duas partições no disco sdb sendo a primeira de 20% do disco para container e a sunda de 80% para maquinas virtuais.
