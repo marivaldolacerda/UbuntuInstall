@@ -6,7 +6,7 @@
 
 sudo lsblk
 
-``arivaldo@ubsrv01:~$ sudo lsblk``
+arivaldo@ubsrv01:~$ sudo lsblk
 [sudo] password for marivaldo:
 NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 sda      8:0    0   1.8T  0 disk
