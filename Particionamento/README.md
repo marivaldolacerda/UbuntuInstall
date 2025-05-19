@@ -29,3 +29,30 @@ Using /dev/sdb
 Welcome to GNU Parted! Type 'help' to view a list of commands.
 (parted)    
 
+No prompt do parted, crie a tabela GPT e confirme a destruição de dados:
+
+``(parted) mklabel gpt``
+``Warning: The existing disk label on /dev/sdb will be destroyed and all data on this disk will be lost. Do you want to continue?``
+``Yes/No? Yes``
+
+Em seguida, crie duas partições primárias ext4. Para dividir com 20% para a primeira e 80% para a segunda:
+
+``(parted) mkpart primary ext4 0% 20%``                                       
+``(parted) mkpart primary ext4 20% 100%``
+
+Use print para verificar a tabela de partições criada, então saia do parted:
+
+``(parted) print``
+
+(parted) print                                                            
+Model: LSI MegaRAID SAS RMB (scsi)
+Disk /dev/sdb: 3998GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags: 
+
+Number  Start   End     Size    File system  Name     Flags
+ 1      1049kB  800GB   800GB                primary
+ 2      800GB   3998GB  3198GB               primary
+
+``(parted) quit``
